@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./Hero.module.css";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { GithubIcon } from "@/components/icons/GithubIcon";
@@ -18,8 +17,8 @@ export default function Hero({ heroText }: HeroProps) {
   const { greeting, name, title, subtitle, button } = heroText;
 
   return (
-    <section className={`bg-slate-100 w-full min-h-212.5 ${styles.section}`}>
-      <div className={styles.pattern} />
+    <section className="bg-slate-100 w-full min-h-212.5 hero-section">
+      <div className="hero-pattern" />
       <div className="pt-32 flex justify-center gap-32 relative z-10">
         <div>
           <Image
