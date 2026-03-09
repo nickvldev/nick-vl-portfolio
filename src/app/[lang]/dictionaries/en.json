@@ -1,0 +1,12 @@
+{
+  "global": {},
+  "home": {
+    "hero": {
+      "greeting": "Hi, I’m",
+      "title": "Software Engineer",
+      "subtitle": "Passionate about creating digital solutions that accelerate the workflow of businesses.",
+      "button": "View my work",
+      "name": "Nick Van Looveren"
+    }
+  }
+}
