@@ -1,5 +1,16 @@
 {
-  "global": {},
+  "portfolio": {
+    "projectCards": {
+      "brabo": {
+        "title": "Brabo Operations platform",
+        "description": "Central operations platform that digitalises Brabo's operational activities."
+      },
+      "euronav": {
+        "title": "Euronav · FAST",
+        "description": "Fleet operations platform that streamlines vessel management with real-time tracking and reporting."
+      }
+    }
+  },
   "home": {
     "hero": {
       "greeting": "Hi, I’m",
@@ -7,6 +18,11 @@
       "subtitle": "Passionate about creating digital solutions that accelerate the workflow of businesses.",
       "button": "View my work",
       "name": "Nick Van Looveren"
+    },
+    "featuredProjects": {
+      "label": "Portfolio",
+      "title": "Featured Projects",
+      "subtitle": "Projects I've worked on that I'm particularly proud of."
     }
   }
 }

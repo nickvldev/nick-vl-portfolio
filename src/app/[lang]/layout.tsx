@@ -1,5 +1,5 @@
 import "../globals.css";
-import { draft } from "@/utils/fonts";
+import { draft, jetbrainsMono } from "@/utils/fonts";
 
 export async function generateStaticParams() {
   return [{ lang: "nl" }, { lang: "en" }];
@@ -12,7 +12,10 @@ interface LayoutProps {
 
 export default async function RootLayout({ children, params }: LayoutProps) {
   return (
-    <html lang={(await params).lang} className={`${draft.variable}`}>
+    <html
+      lang={(await params).lang}
+      className={`${draft.variable} ${jetbrainsMono.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

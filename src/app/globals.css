@@ -3,6 +3,8 @@
 @theme {
   --font-draft: "";
   --font-family-draft: var(--font-draft), sans-serif;
+  --font-jetbrains-mono: "";
+  --font-family-jetbrains-mono: var(--font-jetbrains-mono), monospace;
 }
 
 @layer base {

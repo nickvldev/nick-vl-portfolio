@@ -1,6 +1,13 @@
-import { getDictionary, hasLocale } from "./dictionaries";
+import { getDictionary, hasLocale } from "@/utils/dictionaries";
 import { notFound } from "next/navigation";
 import Hero from "@/components/home/Hero";
+import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import {
+  projects,
+  type PortfolioProject,
+  type Project,
+  type ProjectTranslation,
+} from "@/data/projects";
 
 export default async function Page({ params }: { params: { lang: string } }) {
   const { lang } = await params;
@@ -10,10 +17,22 @@ export default async function Page({ params }: { params: { lang: string } }) {
   }
 
   const dict = await getDictionary(lang);
+  const featuredProjects: PortfolioProject[] = projects
+    .filter((project: Project) => project.featured)
+    .map((project: Project) => ({
+      ...project,
+      ...(dict.portfolio.projectCards[
+        project.slug as keyof typeof dict.portfolio.projectCards
+      ] as ProjectTranslation),
+    }));
 
   return (
-    <main className="min-h-screen bg-zinc-50">
+    <main className="min-h-screen bg-slate-100">
       <Hero heroText={dict.home.hero} />
+      <FeaturedProjects
+        featuredProjectsText={dict.home.featuredProjects}
+        featuredProjects={featuredProjects}
+      />
     </main>
   );
 }

@@ -1,5 +1,16 @@
 {
-  "global": {},
+  "portfolio": {
+    "projectCards": {
+      "brabo": {
+        "title": "Brabo Operationeel Platform",
+        "description": "Centraal operationeel platform dat de operationele activiteiten van Brabo digitaliseert."
+      },
+      "euronav": {
+        "title": "Euronav · FAST",
+        "description": "Platform voor vlootoperaties dat het beheer van schepen stroomlijnt met realtime tracking en rapportage."
+      }
+    }
+  },
   "home": {
     "hero": {
       "greeting": "Hallo, ik ben",
@@ -7,6 +18,11 @@
       "title": "Software Engineer",
       "subtitle": "Gepassioneerd door het creëren van digitale oplossingen die de workflow van bedrijven versnellen.",
       "button": "Bekijk mijn werk"
+    },
+    "featuredProjects": {
+      "label": "Portfolio",
+      "title": "Uitgelichte Projecten",
+      "subtitle": "Projecten waaraan ik heb gewerkt en waar ik extra trots op ben."
     }
   }
 }

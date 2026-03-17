@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
-import { GithubIcon } from "@/components/icons/GithubIcon";
+import { PrimaryButton } from "@/components/global/PrimaryButton";
+import { Socials } from "@/components/global/Socials";
 
 interface HeroProps {
   heroText: {
@@ -17,7 +16,7 @@ export default function Hero({ heroText }: HeroProps) {
   const { greeting, name, title, subtitle, button } = heroText;
 
   return (
-    <section className="relative overflow-hidden bg-[#f0f4f8] w-full lg:min-h-[800px] flex lg:[clip-path:polygon(0_0,100%_0,100%_100%,0_90%)]">
+    <section className="relative overflow-hidden bg-slate-200 w-full lg:min-h-[800px] flex lg:[clip-path:polygon(0_0,100%_0,100%_100%,0_90%)]">
       <div className="hero-pattern absolute inset-0 w-full lg:w-3/5 bg-[length:1200px_1200px] bg-repeat pointer-events-none z-0 opacity-40 lg:opacity-100" />
 
       <div className="container mx-auto px-6 pt-28 lg:pt-24 relative z-10 flex flex-col-reverse lg:flex-row justify-between lg:items-center gap-10 lg:gap-24 xl:gap-32 w-full">
@@ -48,37 +47,10 @@ export default function Hero({ heroText }: HeroProps) {
             </p>
 
             <div className="pb-12">
-              <button className="bg-teal-600 text-lg md:text-xl rounded-lg text-white px-8 py-3.5 font-medium shadow-sm hover:shadow-md hover:bg-teal-700 transition-all duration-300 hover:cursor-pointer hover:scale-105 active:scale-95">
-                {button}
-              </button>
+              <PrimaryButton>{button}</PrimaryButton>
             </div>
 
-            <div className="flex gap-6 items-center">
-              <a
-                href="https://www.linkedin.com/in/nick-van-looveren-87613a1b9/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform duration-300"
-              >
-                <LinkedInIcon className="w-8 h-8 md:w-10 md:h-10 text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer" />
-              </a>
-              <a
-                href="mailto:vanlooverennick@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform duration-300"
-              >
-                <EnvelopeIcon className="w-11 h-11 md:w-13 md:h-13 text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer" />
-              </a>
-              <a
-                href="https://github.com/nickvldev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:scale-110 transition-transform duration-300"
-              >
-                <GithubIcon className="w-8 h-8 md:w-10 md:h-10 text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer" />
-              </a>
-            </div>
+            <Socials />
           </div>
         </div>
       </div>
