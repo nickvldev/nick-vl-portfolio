@@ -18,7 +18,7 @@ export function FeaturedProjects({
   const { title, subtitle, label } = featuredProjectsText;
   return (
     <section className="pt-32 flex flex-col pb-">
-      <div className="flex flex-col gap-4 items-center justify-center">
+      <div className="flex flex-col gap-4 px-4 items-center justify-center">
         <span className="text-sm font-bold tracking-widest text-red-400 font-jetbrains-mono">
           {toUpperCase(label)}
         </span>

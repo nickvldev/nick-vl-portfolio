@@ -19,7 +19,7 @@ export default function Hero({ heroText }: HeroProps) {
     <section className="relative overflow-hidden bg-slate-200 w-full lg:min-h-[800px] flex lg:[clip-path:polygon(0_0,100%_0,100%_100%,0_90%)]">
       <div className="hero-pattern absolute inset-0 w-full lg:w-3/5 bg-[length:1200px_1200px] bg-repeat pointer-events-none z-0 opacity-40 lg:opacity-100" />
 
-      <div className="container mx-auto px-6 pt-28 lg:pt-24 relative z-10 flex flex-col-reverse lg:flex-row justify-between lg:items-center gap-10 lg:gap-24 xl:gap-32 w-full">
+      <div className="container mx-auto px-4 pt-28 lg:pt-24 relative z-10 flex flex-col-reverse lg:flex-row justify-between lg:items-center gap-10 lg:gap-24 xl:gap-32 w-full">
         <div className="w-full lg:flex-1 flex justify-center lg:justify-end lg:self-end">
           <Image
             width={700}
@@ -42,7 +42,7 @@ export default function Hero({ heroText }: HeroProps) {
               {title}
             </h1>
 
-            <p className="text-lg md:text-xl xl:text-2xl max-w-md md:max-w-lg xl:max-w-2xl pb-10 text-slate-700 leading-relaxed">
+            <p className="text-lg md:text-xl xl:text-2xl max-w-md md:max-w-lg xl:max-w-2xl pb-8 sm:pb-10 text-slate-700 leading-relaxed">
               {subtitle}
             </p>
 

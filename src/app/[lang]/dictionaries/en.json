@@ -23,6 +23,11 @@
       "label": "Portfolio",
       "title": "Featured Projects",
       "subtitle": "Projects I've worked on that I'm particularly proud of."
+    },
+    "aboutMeCTA": {
+      "title": "Want to know more about me?",
+      "subtitle": "Take a deeper look at my education, career path and technical skillset.",
+      "button": "About me"
     }
   }
 }

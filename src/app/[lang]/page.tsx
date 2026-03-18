@@ -8,6 +8,7 @@ import {
   type Project,
   type ProjectTranslation,
 } from "@/data/projects";
+import { AboutMeCTA } from "@/components/home/AboutMeCTA";
 
 export default async function Page({ params }: { params: { lang: string } }) {
   const { lang } = await params;
@@ -33,6 +34,7 @@ export default async function Page({ params }: { params: { lang: string } }) {
         featuredProjectsText={dict.home.featuredProjects}
         featuredProjects={featuredProjects}
       />
+      <AboutMeCTA aboutMeCTAText={dict.home.aboutMeCTA} />
     </main>
   );
 }
