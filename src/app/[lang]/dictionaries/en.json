@@ -1,4 +1,9 @@
 {
+  "navBar": {
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
   "portfolio": {
     "projectCards": {
       "brabo": {
