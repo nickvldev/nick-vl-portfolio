@@ -1,18 +1,15 @@
 "use client";
 import { NavItem } from "@/components/global/NavItem";
+import { getNavLinks, NavBarText } from "@/data/navLinks";
 import Image from "next/image";
 import { useState } from "react";
 
 interface NavBarProps {
-  navBarText: {
-    portfolio: string;
-    about: string;
-    contact: string;
-  };
+  navBarText: NavBarText;
 }
 
 export function NavBar({ navBarText }: NavBarProps) {
-  const { portfolio, about, contact } = navBarText;
+  const navLinks = getNavLinks(navBarText);
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -26,9 +23,13 @@ export function NavBar({ navBarText }: NavBarProps) {
         />
 
         <div className="hidden md:flex h-full">
-          <NavItem href="/portfolio" content={portfolio} />
-          <NavItem href="/about" content={about} />
-          <NavItem href="/contact" content={contact} />
+          {navLinks.map((navLink) => (
+            <NavItem
+              key={navLink.href}
+              href={navLink.href}
+              content={navLink.label}
+            />
+          ))}
         </div>
 
         <button
@@ -56,15 +57,11 @@ export function NavBar({ navBarText }: NavBarProps) {
 
       {isOpen && (
         <div className="md:hidden flex flex-col border-t border-slate-100">
-          <div className="border-b border-slate-100">
-            <NavItem href="/portfolio" content={portfolio} />
-          </div>
-          <div className="border-b border-slate-100">
-            <NavItem href="/about" content={about} />
-          </div>
-          <div className="border-b border-slate-100">
-            <NavItem href="/contact" content={contact} />
-          </div>
+          {navLinks.map((navLink) => (
+            <div key={navLink.href} className="border-b border-slate-100">
+              <NavItem href={navLink.href} content={navLink.label} />
+            </div>
+          ))}
         </div>
       )}
     </nav>

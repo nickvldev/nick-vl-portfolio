@@ -1,34 +1,99 @@
+import type { ComponentType } from "react";
 import { LinkedInIcon } from "@/components/icons/LinkedInIcon";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { GithubIcon } from "@/components/icons/GithubIcon";
 
-export function Socials() {
+type SocialSize = "sm" | "lg";
+
+interface SocialLink {
+  href: string;
+  icon: ComponentType<{ className?: string }>;
+  label: string;
+  linkClassName?: string;
+  iconClassName?: string;
+  iconSizeClassName?: Partial<Record<SocialSize, string>>;
+}
+
+interface SocialsProps {
+  links?: SocialLink[];
+  className?: string;
+  linkClassName?: string;
+  iconClassName?: string;
+  size?: SocialSize;
+}
+
+const socialLinks: SocialLink[] = [
+  {
+    href: "https://www.linkedin.com/in/nick-van-looveren-87613a1b9/",
+    icon: LinkedInIcon,
+    label: "LinkedIn",
+  },
+  {
+    href: "mailto:vanlooverennick@gmail.com",
+    icon: EnvelopeIcon,
+    label: "Email",
+    iconSizeClassName: {
+      sm: "w-8 h-8",
+      lg: "w-11 h-11 md:w-13 md:h-13",
+    },
+  },
+  {
+    href: "https://github.com/nickvldev",
+    icon: GithubIcon,
+    label: "GitHub",
+  },
+];
+
+export function Socials({
+  links = socialLinks,
+  className = "",
+  linkClassName = "",
+  iconClassName = "",
+  size = "lg",
+}: SocialsProps) {
+  const containerClassName = ["flex gap-6 items-center", className]
+    .filter(Boolean)
+    .join(" ");
+
+  const baseLinkClassName = "hover:scale-110 transition-transform duration-300";
+  const baseIconClassName =
+    "text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer";
+  const sizeClassName = size === "sm" ? "w-6 h-6" : "w-8 h-8 md:w-10 md:h-10";
+
   return (
-    <div className="flex gap-6 items-center">
-      <a
-        href="https://www.linkedin.com/in/nick-van-looveren-87613a1b9/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:scale-110 transition-transform duration-300"
-      >
-        <LinkedInIcon className="w-8 h-8 md:w-10 md:h-10 text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer" />
-      </a>
-      <a
-        href="mailto:vanlooverennick@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:scale-110 transition-transform duration-300"
-      >
-        <EnvelopeIcon className="w-11 h-11 md:w-13 md:h-13 text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer" />
-      </a>
-      <a
-        href="https://github.com/nickvldev"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:scale-110 transition-transform duration-300"
-      >
-        <GithubIcon className="w-8 h-8 md:w-10 md:h-10 text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer" />
-      </a>
+    <div className={containerClassName}>
+      {links.map(
+        ({
+          href,
+          icon: Icon,
+          label,
+          linkClassName: itemLinkClassName,
+          iconClassName: itemIconClassName,
+          iconSizeClassName: itemIconSizeClassName,
+        }) => (
+          <a
+            key={href}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            className={[baseLinkClassName, linkClassName, itemLinkClassName]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            <Icon
+              className={[
+                itemIconSizeClassName?.[size] ?? sizeClassName,
+                baseIconClassName,
+                iconClassName,
+                itemIconClassName,
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            />
+          </a>
+        ),
+      )}
     </div>
   );
 }

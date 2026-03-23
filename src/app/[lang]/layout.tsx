@@ -3,6 +3,7 @@ import { draft, jetbrainsMono } from "@/utils/fonts";
 import { getDictionary, hasLocale } from "@/utils/dictionaries";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/global/NavBar";
+import { Footer } from "@/components/global/Footer";
 
 export async function generateStaticParams() {
   return [{ lang: "nl" }, { lang: "en" }];
@@ -30,6 +31,7 @@ export default async function RootLayout({ children, params }: LayoutProps) {
       <body>
         <NavBar navBarText={dict.navBar} />
         {children}
+        <Footer footerText={dict.footer} navBarText={dict.navBar} />
       </body>
     </html>
   );

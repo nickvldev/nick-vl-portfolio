@@ -1,8 +1,12 @@
 {
   "navBar": {
+    "home": "Home",
     "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "Copyright © {year} Nick Van Looveren"
   },
   "portfolio": {
     "projectCards": {
