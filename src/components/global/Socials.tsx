@@ -9,15 +9,11 @@ interface SocialLink {
   href: string;
   icon: ComponentType<{ className?: string }>;
   label: string;
-  linkClassName?: string;
-  iconClassName?: string;
-  iconSizeClassName?: Partial<Record<SocialSize, string>>;
+  iconSizeClassName?: Record<SocialSize, string>;
 }
 
 interface SocialsProps {
-  links?: SocialLink[];
   className?: string;
-  linkClassName?: string;
   iconClassName?: string;
   size?: SocialSize;
 }
@@ -45,9 +41,7 @@ const socialLinks: SocialLink[] = [
 ];
 
 export function Socials({
-  links = socialLinks,
   className = "",
-  linkClassName = "",
   iconClassName = "",
   size = "lg",
 }: SocialsProps) {
@@ -55,20 +49,17 @@ export function Socials({
     .filter(Boolean)
     .join(" ");
 
-  const baseLinkClassName = "hover:scale-110 transition-transform duration-300";
   const baseIconClassName =
     "text-slate-800 hover:text-red-400 transition-colors duration-300 cursor-pointer";
   const sizeClassName = size === "sm" ? "w-6 h-6" : "w-8 h-8 md:w-10 md:h-10";
 
   return (
     <div className={containerClassName}>
-      {links.map(
+      {socialLinks.map(
         ({
           href,
           icon: Icon,
           label,
-          linkClassName: itemLinkClassName,
-          iconClassName: itemIconClassName,
           iconSizeClassName: itemIconSizeClassName,
         }) => (
           <a
@@ -77,16 +68,13 @@ export function Socials({
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className={[baseLinkClassName, linkClassName, itemLinkClassName]
-              .filter(Boolean)
-              .join(" ")}
+            className="hover:scale-110 transition-transform duration-300"
           >
             <Icon
               className={[
                 itemIconSizeClassName?.[size] ?? sizeClassName,
                 baseIconClassName,
                 iconClassName,
-                itemIconClassName,
               ]
                 .filter(Boolean)
                 .join(" ")}
