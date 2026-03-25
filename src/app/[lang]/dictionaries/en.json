@@ -17,6 +17,18 @@
       "euronav": {
         "title": "Euronav · FAST",
         "description": "Fleet operations platform that streamlines vessel management with real-time tracking and reporting."
+      },
+      "frontforce": {
+        "title": "FrontForce · In The Field 3D",
+        "description": "3D map extension for In The Field app. Enables firefighters to inspect building CAD models."
+      },
+      "duxxit": {
+        "title": "Steelduxx · Duxxit",
+        "description": "Logistics platform that streamlines steel transportation and automates client invoicing."
+      },
+      "henconnect": {
+        "title": "Henco · Henconnect",
+        "description": "Mobile companion app for installation of the Henco Smart Monitoring Valve and Detector, including viewing it's metrics."
       }
     }
   },

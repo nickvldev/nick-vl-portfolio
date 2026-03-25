@@ -15,7 +15,7 @@ export function PrimaryButton({
   const sizeClasses =
     size === "sm"
       ? "text-base md:text-lg px-6 py-2.5"
-      : "text-lg md:text-xl px-8 py-3.5";
+      : "text-lg lg:text-xl px-8 py-3.5";
   return (
     <button
       type={type}

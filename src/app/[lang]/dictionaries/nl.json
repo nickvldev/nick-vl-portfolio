@@ -11,12 +11,24 @@
   "portfolio": {
     "projectCards": {
       "brabo": {
-        "title": "Brabo Operationeel Platform",
+        "title": "Brabo · Opera",
         "description": "Centraal operationeel platform dat de operationele activiteiten van Brabo digitaliseert."
       },
       "euronav": {
         "title": "Euronav · FAST",
         "description": "Platform voor vlootoperaties dat het beheer van schepen stroomlijnt met realtime tracking en rapportage."
+      },
+      "frontforce": {
+        "title": "In The Field 3D",
+        "description": "3D-kaartuitbreiding voor de In The Field-app, waarmee de brandweer CAD-modellen van gebouwen kan inspecteren"
+      },
+      "duxxit": {
+        "title": "Steelduxx · Duxxit",
+        "description": "Een logistiek platform voor het optimaliseren van staaltransport en het automatiseren van de facturatie."
+      },
+      "henconnect": {
+        "title": "Henco · Henconnect",
+        "description": "Bijbehorende mobiele app voor het installeren van de Henco Smart monitoring Valve en Detector, inclusief het inzien van statistieken."
       }
     }
   },

@@ -19,9 +19,9 @@ export default function ProjectCard({
   return (
     <Link
       href={link || "#"}
-      className="group block w-full max-w-sm sm:max-w-md lg:max-w-[450px] min-h-[420px] bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden"
+      className="group block w-full max-w-md mx-auto h-full bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden"
     >
-      <div className="relative w-full h-56 overflow-hidden">
+      <div className="relative w-full aspect-video overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}
@@ -30,12 +30,12 @@ export default function ProjectCard({
         />
       </div>
 
-      <div className="p-6 sm:p-8">
+      <div className="p-6 xl:p-8">
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-teal-50 text-teal-600 font-mono text-sm px-3 py-1 rounded-md"
+              className="bg-teal-50 text-teal-600 font-mono text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-md"
             >
               {tag}
             </span>
@@ -43,7 +43,7 @@ export default function ProjectCard({
         </div>
 
         <div className="flex items-center gap-1 mb-2">
-          <h3 className="text-xl font-medium  group-hover:text-teal-600 transition-colors duration-300">
+          <h3 className="text-lg sm:text-xl font-medium group-hover:text-teal-600 transition-colors duration-300">
             {title}
           </h3>
 
@@ -62,7 +62,9 @@ export default function ProjectCard({
           </svg>
         </div>
 
-        <p className="text-slate-500 leading-relaxed">{description}</p>
+        <p className="text-sm sm:text-base text-slate-500 leading-relaxed">
+          {description}
+        </p>
       </div>
     </Link>
   );

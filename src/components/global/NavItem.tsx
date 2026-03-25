@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 
 interface NavItemProps {
   href: string;
@@ -10,7 +10,9 @@ interface NavItemProps {
 
 export function NavItem({ href, content }: NavItemProps) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const params = useParams<{ lang: string }>();
+  const lang = params.lang;
+  const isActive = pathname === `/${lang}${href}`;
   const isText = typeof content === "string";
 
   return (
