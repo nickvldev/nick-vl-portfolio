@@ -1,5 +1,4 @@
 import { toUpperCase } from "uri-js/dist/esnext/util";
-import ProjectCard from "@/components/global/ProjectCard";
 import type { PortfolioProject } from "@/data/projects";
 import { Projects } from "@/components/portfolio/Projects";
 

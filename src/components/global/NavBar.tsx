@@ -13,7 +13,7 @@ export function NavBar({ navBarText }: NavBarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="relative z-10 bg-white shadow-small">
       <div className="flex items-center justify-between h-23 pr-4 md:px-8">
         <NavItem
           href="/"

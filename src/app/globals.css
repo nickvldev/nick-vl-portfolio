@@ -15,6 +15,18 @@
   }
 }
 
+@utility shadow-extra-small {
+  box-shadow: 0 1px 2px 0 rgba(29, 41, 61, 0.24), 0 1px 2px 0 rgba(29, 41, 61, 0.12);
+}
+
+@utility shadow-small {
+  box-shadow: 0 3px 6px 0 rgba(29, 41, 61, 0.15), 0 2px 4px 0 rgba(29, 41, 61, 0.12);
+}
+
+@utility shadow-medium {
+  box-shadow: 0 10px 20px 0 rgba(29, 41, 61, 0.15), 0 3px 6px 0 rgba(29, 41, 61, 0.10);
+}
+
 @layer components {
   .hero-pattern {
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);

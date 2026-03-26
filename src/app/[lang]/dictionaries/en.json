@@ -9,6 +9,11 @@
     "copyright": "Copyright © {year} Nick Van Looveren"
   },
   "portfolio": {
+    "intro": {
+      "title": "Portfolio",
+      "subtitle": "Take a look at the projects I have contributed to over the years.",
+      "introText": "I’ve worked on impactful digital products at Made, as well as several academic and personal initiatives that helped grow my skills as a developer."
+    },
     "projectCards": {
       "brabo": {
         "title": "Brabo Operations platform",

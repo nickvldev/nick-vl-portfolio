@@ -9,6 +9,11 @@
     "copyright": "Copyright © {year} Nick Van Looveren"
   },
   "portfolio": {
+    "intro": {
+      "title": "Portfolio",
+      "subtitle": "Bekijk de projecten waaraan ik de afgelopen jaren heb meegewerkt.",
+      "introText": "Ik heb gewerkt aan impactvolle digitale producten bij Made, en aan diverse academische en persoonlijke projecten waarmee ik mijn vaardigheden als developer verder heb ontwikkeld."
+    },
     "projectCards": {
       "brabo": {
         "title": "Brabo · Opera",

@@ -7,6 +7,7 @@ import {
   type ProjectTranslation,
 } from "@/data/projects";
 import { Projects } from "@/components/portfolio/Projects";
+import { Intro } from "@/components/portfolio/Intro";
 
 export default async function Page({ params }: { params: { lang: string } }) {
   const { lang } = await params;
@@ -27,6 +28,7 @@ export default async function Page({ params }: { params: { lang: string } }) {
 
   return (
     <main className="min-h-screen bg-slate-100">
+      <Intro intro={dict.portfolio.intro} />
       <Projects projects={portfolioProjects} />
     </main>
   );

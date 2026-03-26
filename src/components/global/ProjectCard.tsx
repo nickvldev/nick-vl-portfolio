@@ -19,14 +19,15 @@ export default function ProjectCard({
   return (
     <Link
       href={link || "#"}
-      className="group block w-full max-w-md mx-auto h-full bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 overflow-hidden"
+      className="relative group block w-full max-w-md mx-auto h-full bg-white rounded-2xl shadow-small hover:shadow-medium transition-shadow duration-300 overflow-hidden"
     >
+      <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-slate-50 pointer-events-none z-10" />
       <div className="relative w-full aspect-video overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
         />
       </div>
 
