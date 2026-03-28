@@ -14,7 +14,7 @@ export function NavBar({ navBarText }: NavBarProps) {
 
   return (
     <nav className="relative z-10 bg-white shadow-small">
-      <div className="flex items-center justify-between h-23 pr-4 md:px-8">
+      <div className="flex items-center justify-between h-23 px-8 xs:px-11">
         <NavItem
           href="/"
           content={

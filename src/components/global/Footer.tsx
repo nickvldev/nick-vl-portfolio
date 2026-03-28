@@ -21,7 +21,7 @@ export function Footer({ footerText, navBarText }: FooterProps) {
   );
 
   return (
-    <footer className="h-23 flex items-center justify-center  md:justify-between bg-slate-800 px-8">
+    <footer className="h-23 flex items-center justify-center md:justify-between bg-slate-800 px-8 xs:px-11">
       <p className="text-slate-400">{dynamicCopyright}</p>
       <div className="hidden md:flex items-center gap-8">
         <Link className={navItemClassName} href={"/"}>

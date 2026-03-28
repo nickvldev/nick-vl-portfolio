@@ -17,7 +17,7 @@ export function NavItem({ href, content }: NavItemProps) {
 
   return (
     <Link
-      className={`relative px-4 group flex justify-center items-center h-full`}
+      className={`relative ${isText ? "px-4" : ""} group flex justify-center items-center h-full`}
       href={href}
     >
       {isText ? (
