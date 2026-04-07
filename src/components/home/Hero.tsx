@@ -19,7 +19,7 @@ export default function Hero({ heroText }: HeroProps) {
     <section className="relative overflow-hidden bg-slate-200 w-full lg:min-h-[680px] xl:min-h-[800px] flex lg:[clip-path:polygon(0_0,100%_0,100%_100%,0_90%)]">
       <div className="hero-pattern absolute inset-0 w-full lg:w-3/5 bg-[length:1200px_1200px] bg-repeat pointer-events-none z-0 opacity-40 lg:opacity-100" />
 
-      <div className="container mx-auto px-8 xs:px-11 pt-10 relative z-10 flex flex-col-reverse lg:flex-row justify-between lg:items-center gap-8 lg:gap-10 xl:gap-20 2xl:gap-32 w-full">
+      <div className="max-w-360 mx-auto px-8 xs:px-11 pt-10 relative z-10 flex flex-col-reverse lg:flex-row justify-between lg:items-center gap-8 lg:gap-10 xl:gap-20 2xl:gap-32 w-full">
         <div className="w-full lg:flex-1 flex justify-center lg:justify-end lg:self-end">
           <Image
             width={700}

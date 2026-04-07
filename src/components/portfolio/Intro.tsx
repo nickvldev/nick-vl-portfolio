@@ -11,10 +11,12 @@ interface IntroProps {
 export function Intro({ intro }: IntroProps) {
   const { title, subtitle, introText } = intro;
   return (
-    <section className="bg-white flex justify-center shadow-extra-small py-[96px] px-8 xs:px-11">
-      <div className="w-[1280px] justify-between flex flex-col lg:flex-row">
+    <section className="bg-white flex justify-center shadow-extra-small py-[96px]">
+      <div className="max-w-360 w-full px-8 xs:px-11 justify-between flex flex-col lg:flex-row">
         <div className="flex justify-center flex-col max-w-lg self-center">
-          <h1 className="text-8xl font-bold ">{title}</h1>
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold">
+            {title}
+          </h1>
           <p className="text-2xl pb-6 ">{subtitle}</p>
           <p className="text-lg leading-relaxed">{introText}</p>
         </div>

@@ -55,5 +55,12 @@
       "subtitle": "Ontdek meer over mijn opleiding, carrièrepad en technische skillset.",
       "button": "Over mij"
     }
+  },
+  "about": {
+    "intro": {
+      "title": "Over mij",
+      "subtitle": "Ik ben een software developer gevestigd in Antwerpen, België.",
+      "introText": "Met ruim drie jaar professionele ervaring heb ik meegewerkt aan grootschalige, impactvolle digitale oplossingen voor klanten als Euronav en Brabo. Hierbij heb ik bijgedragen aan zowel frontend- als backend-development."
+    }
   }
 }

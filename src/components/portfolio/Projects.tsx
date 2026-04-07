@@ -7,8 +7,8 @@ interface ProjectsProps {
 
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <div className="flex py-24 justify-center px-8 xs:px-11">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl items-stretch">
+    <div className="py-24 px-8 xs:px-11 max-w-360 mx-auto w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
         {projects.map((project) => (
           <ProjectCard
             key={project.slug}

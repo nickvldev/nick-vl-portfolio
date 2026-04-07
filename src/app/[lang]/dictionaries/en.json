@@ -55,5 +55,12 @@
       "subtitle": "Take a deeper look at my education, career path and technical skillset.",
       "button": "About me"
     }
+  },
+  "about": {
+    "intro": {
+      "title": "About me",
+      "subtitle": "I’m a software developer based in Antwerp, Belgium",
+      "introText": "With over three years of professional experience, I’ve helped build large-scale, impactful digital solutions for clients such as Euronav and Brabo, contributing to both frontend and backend development."
+    }
   }
 }

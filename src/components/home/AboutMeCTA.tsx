@@ -13,7 +13,7 @@ export function AboutMeCTA({ aboutMeCTAText }: AboutMeCTAProps) {
 
   return (
     <section className="relative overflow-hidden cta-pattern w-full flex">
-      <div className="container mx-auto px-8 xs:px-11 py-32 w-full flex flex-col items-center">
+      <div className="max-w-360 mx-auto px-8 xs:px-11 py-32 w-full flex flex-col items-center">
         <div className="flex flex-col items-start text-left w-fit max-w-full">
           <h2 className="font-medium text-3xl md:text-4xl lg:text-5xl text-white pb-4">
             {title}
